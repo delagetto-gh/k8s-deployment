@@ -1,0 +1,17 @@
+# PersistetVolume
+# Let's create a persistennt volume for our db
+
+# Secrets (remember has to be base64 encoded)
+# Lets lload the db admin user/password as k8s secret
+
+# Deployment (StatefulSet)
+# Let's define a deployment of our database - it will be a statefull set deployment
+
+# Service
+# Let's create a ClusterIP (intenal Loadbalancer) over our pods
+
+# Ingess
+# Let's create an entypoint for external requests to our cluster
+# (but this s just so we are able to access the db for maintenace,
+#  ...not eally for external clients)
+
