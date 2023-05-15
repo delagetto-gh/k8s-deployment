@@ -103,7 +103,7 @@ spec:
 
 ---
 
-# Ingess
+# Ingress
 # Let's create an entypoint for external requests to our cluste
 # NOTE:: Must install NGINX Ingress controller first @ https://kubernetes.github.io/ingress-nginx/deploy/#quick-start
 
@@ -117,8 +117,8 @@ metadata:
 spec:
   ingressClassName: nginx
   rules:
-  - host: delagetto-scratchpad.com
-    http: 
+# - host:  # An optional host. If no host, then rules apply to all inbound HTTP traffic through the IP address specified (that was mapped in the ingress address).  # If a host is provided (for example, foo.bar.com), the rules apply to that host.
+  - http: 
       paths:
         - path: /
           pathType: Prefix
@@ -127,10 +127,4 @@ spec:
               name: api-service
               port:
                 number: 5050
-
-  #- host:  # An optional host. In this example, no host is specified, 
-                      # so the rule applies to all inbound HTTP traffic through the IP address specified. 
-                      # If a host is provided (for example, foo.bar.com), the rules apply to that host.
-        
-
 
